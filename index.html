@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <div id="container">
@@ -133,6 +133,273 @@
           <div class="navbar__etc--menu menu--download">다운로드샵</div>
           <div class="navbar__etc--menu menu--amibo">아미보</div>
           <div class="navbar__etc--menu menu--myNin">마이 닌텐도</div>
+        </div>
+      </div>
+      <!-- 이미지 슬라이드 - 메인 섹션 -->
+      <div id="slide__container">
+        <!-- 슬라이드 이미지 쇼 -->
+        <div class="main__slider">
+          <div class="slides">
+            <!-- 첫번째 이미지 -->
+            <div class="slide__content slide--active">
+              <div class="slide--img">
+                <img src="img/bgS_animalCrossing.png" alt="animalCrossing" />
+              </div>
+            </div>
+            <!-- 두번째 이미지 -->
+            <div class="slide__content slide--active-X">
+              <div class="slide--img">
+                <img src="img/bgS_pokemonEx.png" alt="pokemonEx" />
+              </div>
+            </div>
+            <!-- 세번째 이미지 -->
+            <div class="slide__content slide--active-X">
+              <div class="slide--img">
+                <img src="img/bgS_ringfit.png" alt="RingFit" />
+              </div>
+            </div>
+            <!-- 네번째 이미지 -->
+            <div class="slide__content slide--active-X">
+              <div class="slide--img">
+                <img src="img/bgS_nintendoLite.png" alt="nintendoLite" />
+              </div>
+            </div>
+            <!-- 다섯번째 이미지 -->
+            <div class="slide__content slide--active-X">
+              <div class="slide--img">
+                <img src="img/bgS_luigi.png" alt="Luigi3" />
+              </div>
+            </div>
+            <!-- 여섯번째 이미지 -->
+            <div class="slide__content slide--active-X">
+              <div class="slide--img">
+                <img src="img/bgS_zeldaAwakening.png" alt="Zelda:Awakening" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 슬라이드 버튼 태그 -->
+        <div class="btn__boxes not--mobile">
+          <div class="progress__btn btn--active">
+            <!-- 차징 프로그래스 바 -->
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <!-- 버튼 내용 -->
+            <h2 class="btn__title">모여봐요 동물의 숲</h2>
+          </div>
+          <div class="progress__btn short-line">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <h2 class="btn__title">포켓몬스터 소드· 실드</h2>
+          </div>
+          <div class="progress__btn">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <h2 class="btn__title">링 피트 어드벤처</h2>
+          </div>
+          <div class="progress__btn short-line">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <h2 class="btn__title">닌텐도 스위치 Lite</h2>
+          </div>
+          <div class="progress__btn short-line-2">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <h2 class="btn__title">루이지 멘션 3</h2>
+          </div>
+          <div class="progress__btn">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <h2 class="btn__title">젤다의 전설 : 꿈꾸는 섬</h2>
+          </div>
+        </div>
+      </div>
+      <!-- 닌텐도 소개 - 섹션2 -->
+      <div id="explantion__container">
+        <div class="slide__Wrap">
+          <div class="slide__box">
+            <div class="slide__list clearfix">
+              <div class="slide__section slide1">
+                <div class="slide__contents">
+                  <div class="top">
+                    <h2 class="subTitle">작고, 가볍고, 편하다</h2>
+                    <h1 class="mainTitle">Nintendo Switch Lite</h1>
+                    <p class="text">
+                      「Nintendo Switch Lite」는 컨트롤러와 본체를
+                      일체화시켜,<br />
+                      작고, 가볍고, 가지고 다니기 편해진 휴대 전용 Nintendo
+                      Switch입니다.
+                    </p>
+                    <button type="button" class="more">
+                      제품 보러가기<i class="fas fa-angle-right more-right"></i>
+                    </button>
+                  </div>
+                  <div class="bottom">
+                    <img src="img/Nintendo_Lite.png" alt="game" />
+                  </div>
+                </div>
+              </div>
+              <div class="slide__section slide2">
+                <div class="slide__contents">
+                  <div class="top">
+                    <h2 class="subTitle">언제, 어디서든, 누구와도</h2>
+                    <h1 class="mainTitle">Nintendo Switch</h1>
+                    <p class="text">
+                      「Nintendo Switch™」은 플레이 장면에 맞추어 형태를
+                      바꾸는<br />
+                      게임기로, 언제, 어디에서나, 마음 가는대로, 자유로운
+                      스타일로 게임을 즐길 수 있습니다.
+                    </p>
+                    <button type="button" class="more">
+                      제품 보러가기<i class="fas fa-angle-right more-right"></i>
+                    </button>
+                  </div>
+                  <div class="bottom">
+                    <img src="img/Nintendo_Switch.png" alt="game" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide__btn">
+            <button class="slide__btn--prev">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <!-- <div class="slide__index">1/2</div> -->
+            <span class="slide__num">
+              <!-- <span class="slide__number slide--zero">0</span> -->
+              <span class="slide__number slide__number--bold">01</span>
+              <span class="slash">/</span>
+              <span class="slide__number">02</span>
+            </span>
+            <button class="slide__btn--next">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 닌텐도 주요 소프트웨어 소개 - 섹션3 -->
+      <div id="software__container">
+        <div id="img__background">
+          <img src="img/bg_animal.png" alt="모여봐요 동물의 숲" class="id-1" />
+          <img
+            src="img/bg_pokemon.png"
+            alt="포켓몬스터 소드 실드"
+            class="id-2"
+          />
+          <img src="img/bg_ringfit.png" alt="링 피트 어드벤처" class="id-3" />
+          <img src="img/bg_luigi.png" alt="루이지 맨션3" class="id-4" />
+          <img src="img/bg_sonic.png" alt="마리오와 소닉" class="id-5" />
+          <img
+            src="img/bg_zelda2.png"
+            alt="젤다의 전설 꿈 꾸는 섬"
+            class="id-6"
+          />
+          <img src="img/bg_mario.png" alt="마리오 카트" class="id-7" />
+          <img src="img/bg_zelda.png" alt="젤다의 전설" class="id-8" />
+        </div>
+        <div id="software__boxes">
+          <div class="section__title">
+            <h3>Main software</h3>
+            <h2>주요 소프트웨어</h2>
+          </div>
+          <div class="software__boxes">
+            <div class="software__btn">
+              <div class="software__box box1" data-id="1">
+                <div class="software--text">
+                  <img src="img/char_animalCrossing.png" alt="animalCrossing" />
+                  <h4>2020.03.20</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>ANIMALL CROSSING</h4>
+                  <h4>모여봐요 동물의 숲</h4>
+                </div>
+              </div>
+              <div class="software__box box2" data-id="2">
+                <div class="software--text">
+                  <img src="img/char_pokemon.png" alt="pokemonEx" />
+                  <h4>2019.11.15</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>Pokemon</h4>
+                  <h4>포켓몬스터소드 · 실드</h4>
+                </div>
+              </div>
+              <div class="software__box box3" data-id="3">
+                <div class="software--text">
+                  <img src="img/char_ringfit.png" alt="RingFit" />
+                  <h4>2019.10.18</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>ring fit adventure</h4>
+                  <h4>링 피트 어드벤처</h4>
+                </div>
+              </div>
+              <div class="software__box box4" data-id="4">
+                <div class="software--text">
+                  <img src="img/char_luigi.png" alt="luigi" />
+                  <h4>2019.10.31</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>luigi’s mansion</h4>
+                  <h4>루이지 맨션 3</h4>
+                </div>
+              </div>
+              <div class="software__box box5" data-id="5">
+                <div class="software--text">
+                  <img src="img/char_sonic.png" alt="sonic" />
+                  <h4>2019.11.01</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>super mario and sonic</h4>
+                  <h4>마리오와 소닉 AT 2020 도쿄 올림픽</h4>
+                </div>
+              </div>
+              <div class="software__box box6" data-id="6">
+                <div class="software--text">
+                  <img src="img/char_zelda2.png" alt="" />
+                  <h4>2019.09.20</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>the legend of zelda</h4>
+                  <h4>젤다의 전설 꿈꾸는 섬</h4>
+                </div>
+              </div>
+              <div class="software__box box7" data-id="7">
+                <div class="software--text">
+                  <img src="img/char_mario.png" alt="mario" />
+                  <h4>2018.04.03</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>super mario</h4>
+                  <h4>마리오 카트 8 디럭스</h4>
+                </div>
+              </div>
+              <div class="software__box box8" data-id="8">
+                <div class="software--text">
+                  <img src="img/char_zelda.png" alt="zelda" />
+                  <h4>2018.02.01</h4>
+                  <h4>NINTENDO SWITCH</h4>
+                  <span></span>
+                  <h4>the legend of zelda</h4>
+                  <h4>젤다의 전설 브레스 오브 더 와일드</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 닌텐도 다운로드 소프트웨어 - 섹션4 -->
+      <div id="download__container">
+        <div class="section__title black">
+          <h3>download store</h3>
+          <h2>다운로드 번호 스토어</h2>
         </div>
       </div>
     </div>

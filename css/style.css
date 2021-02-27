@@ -20,7 +20,7 @@
   --font-small: 1.05em;
   --font-micro: 0.875em;
   /* Font weight */
-  --weight-bold: 700;
+  --weight-bold: 800;
   --weight-semi-bold: 600;
   --weight-regular: 400;
   /* Size */
@@ -44,15 +44,31 @@ a {
   font-family: 'Roboto', sans-serif;
   font-weight: var(--weight-semi-bold);
 }
+.section__title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+.section__title h3 {
+  font-size: 24px;
+}
+.section__title h2 {
+  font-size: 40px;
+}
+.black {
+  color: #3b3b3b;
+}
 /*  */
 /* --------------1. 네비게이션 바(상단) ------------------- */
 #navbar {
-  background-color: #fcfcfc;
-  box-shadow: 0px 1px 20px #e6e4e4;
-  width: 100%;
-  height: 88px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 88px;
+  box-shadow: 0px 1px 20px #e6e4e4;
+  background-color: #fcfcfc;
+  z-index: 5;
 }
 .navbar__btn {
   flex-basis: 35%;
@@ -106,7 +122,7 @@ input#X__btn {
 #menu__slide {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: -2000px;
   width: 50%;
   height: 100%;
   min-width: 980px;
@@ -294,11 +310,344 @@ input#X__btn {
   line-height: 36px;
   color: #f1001d;
 }
+/*  */
+/* --------------2. 이미지 슬라이드 영역 ------------------- */
+#slide__container {
+  position: relative;
+  top: 0;
+  height: 980px;
+}
+
+/* 슬라이드 이미지 스타일 */
+.main__slider {
+  position: relative;
+  height: 100%;
+}
+.slides {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+}
+.slide__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+}
+.slide--img {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+}
+.slide--img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*  슬라이드 활성화  */
+.slide--active {
+  z-index: 1;
+  opacity: 1;
+}
+/* 슬라이드 버튼  */
+.btn__boxes {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.progress__btn {
+  flex-basis: 16%;
+  position: relative;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+}
+.short-line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 54px;
+  z-index: 10;
+  border-right: 2px solid #b1b1b1;
+  border-left: 2px solid #b1b1b1;
+  box-sizing: border-box;
+}
+.short-line-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 54px;
+  z-index: 10;
+  border-right: 2px solid #b1b1b1;
+}
+.btn__title {
+  font-size: 18px;
+  color: #333333;
+  font-weight: 400;
+  font-size: var(--font-regular);
+  word-break: keep-all;
+}
+.btn--active {
+  opacity: 1;
+  background: #fff;
+}
+.progress__btn:not(.btn--active) {
+  pointer-events: none;
+}
+/* 프로그레스 바 */
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(143, 113, 115, 0.1);
+}
+.progress-bar__fill {
+  width: 0;
+  height: inherit;
+  background: #e70012;
+  transition: all 0.16s;
+}
+/*  */
+/* --------------3. 닌텐도 소개 영역 - 섹션2 ------------------- */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  float: none;
+}
+#explantion__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 140px auto 90px;
+  text-align: center;
+}
+.slide__Wrap {
+  position: relative;
+  width: 1000px;
+  margin: auto;
+}
+.slide__box {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+.slide__list {
+  width: 4000px;
+}
+.slide__section {
+  display: block;
+  float: left;
+  width: 1000px;
+}
+.slide__contents {
+  height: auto;
+}
+.top {
+  margin-bottom: 40px;
+}
+.subTitle {
+  font-size: 24px;
+}
+.mainTitle {
+  font-size: 40px;
+  margin-top: -2px;
+}
+.text {
+  margin: 50px auto 40px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.more {
+  background: transparent;
+  border: 2px solid #cdcdcd;
+  width: 160px;
+  height: 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+.more:hover {
+  border-color: #ed1c24;
+  color: #ed1c24;
+  text-decoration: underline;
+}
+.more-right {
+  margin-left: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* 슬라이드 버튼 */
+/* -------------------- */
+.slide__btn {
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.slide__btn--prev {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 50%;
+  cursor: pointer;
+}
+.slide__btn--next {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 50%;
+  cursor: pointer;
+}
+.slide__num {
+  margin: 0 15px;
+}
+.slide__number {
+  width: 20px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  color: #878b94;
+  margin: 0;
+}
+.slide__number--bold {
+  color: #2a2b2d;
+  font-weight: var(--weight-bold);
+}
+.slide--zero {
+  color: #2a2b2d;
+  font-weight: var(--weight-bold);
+}
+/*  */
+/* --------------4. 닌텐도 주요 소프트웨어 영역 - 섹션3 ------------------- */
+#software__container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 80px 0;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+/* 배경 이미지 스타일 */
+#img__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#img__background img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+  object-position: 0 0;
+}
+#img__background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.589);
+}
+/* 박스 스타일 */
+#software__boxes {
+  position: relative;
+}
+.software__boxes {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.software__btn {
+  display: flex;
+  flex-wrap: wrap;
+}
+.software__box {
+  flex-basis: 24.9%;
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  margin: 0 1px 1px 0;
+  padding: 30px 30px 30px 20px;
+  overflow: hidden;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.software__box:hover .software--text img {
+  opacity: 0;
+}
+.software__box span {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+}
+.software--text h4 {
+  position: relative;
+  text-shadow: 1px 1px 0px #333;
+}
+.software--text img {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-90%, -50%);
+  height: auto;
+  object-fit: cover;
+}
+.box3 .software--text img {
+  left: 96%;
+}
+.box4 .software--text img {
+  top: 55%;
+  left: 96%;
+}
+.box7 .software--text img {
+  left: 90%;
+}
+@keyframes transition {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.boxBtn-imgX {
+  display: none;
+}
 
 /*  */
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
 /* PC 해상도 1024px ~ */
 @media all and (min-width: 1024px) {
 }
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
 /* 중간단계 */
 @media all and (max-width: 1200px) {
   /* 우측 메뉴 숨기기 */
@@ -310,6 +659,7 @@ input#X__btn {
     margin-right: 28px;
   }
 }
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
 /* PC, 태블릿 가로 768px ~ */
 @media all and (min-width: 768px) and (max-width: 1023px) {
   :root {
@@ -420,18 +770,20 @@ input#X__btn {
     transform: translateY(-50%) rotate(0deg) scaleY(-1);
   }
 }
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
 @media all and (max-width: 767px) {
   :root {
     /* color */
     /* Font size */
     --font-large: 2.25em;
-    --font-medium: 2em;
-    --font-regular: 1.75em;
-    --font-small: 1.5em;
-    --font-micro: 1.25em;
+    --font-medium: 1.375em;
+    --font-regular: 1.125em;
+    --font-small: 1em;
+    --font-micro: 0.875em;
   }
   #menu__slide {
     width: 100%;
+    min-width: 100%;
   }
   /* 1-2-1. 메뉴 컨텐츠 스타일 */
   .menu__main {
@@ -453,8 +805,8 @@ input#X__btn {
   .menu-default {
     flex-basis: 100%;
     height: auto;
-    border: none;
     padding: 0;
+    border: none;
   }
   .menu4 {
     margin-bottom: 300px;
@@ -465,6 +817,7 @@ input#X__btn {
     padding: 45px 0;
     border-bottom: 2px solid #dde1e5;
     color: #666;
+    font-size: var(--font-medium);
     transition: all 0.6s ease-in-out;
   }
   .gnb__title > span {
@@ -488,8 +841,48 @@ input#X__btn {
     background-color: #d6d6d6;
     transition: all 0.6s ease-in-out;
   }
-  .gnb__title::after {
+  .gnb__title.active::after {
     display: block;
   }
   /* 2depth 내용 컨텐츠 */
+  .menu__2depth {
+    position: relative;
+    left: 7%;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 2;
+    font-size: var(--font-regular);
+    transition: all 0.6s cubic-bezier(0.42, 0.2, 0.8, 1);
+  }
+  .menu__2depth li {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .menu__2depth li:nth-child(1) {
+    margin-top: 20px;
+  }
+  .menu__2depth li a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+    color: #a7a7a7;
+  }
+  /* 클릭 시 보이는 아코디언 2depth 메뉴 */
+  .menu__2depth.show {
+    top: -20px;
+    height: auto;
+    opacity: 1;
+    z-index: 3;
+  }
+  /* 1depth 타이틀 화살표 */
+  .arrowBtn {
+    display: inline-block;
+    right: 50px;
+  }
+  .arrowBtn.down {
+    transform: translateY(-50%) rotate(0deg) scaleY(-1);
+  }
 }
