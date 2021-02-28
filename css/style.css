@@ -45,7 +45,7 @@ a {
   font-weight: var(--weight-semi-bold);
 }
 .section__title {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   text-align: center;
   color: #fff;
 }
@@ -54,9 +54,6 @@ a {
 }
 .section__title h2 {
   font-size: 40px;
-}
-.black {
-  color: #3b3b3b;
 }
 /*  */
 /* --------------1. 네비게이션 바(상단) ------------------- */
@@ -436,6 +433,7 @@ input#X__btn {
   width: 100%;
   max-width: 1200px;
   margin: 140px auto 90px;
+  padding: 0 20px;
   text-align: center;
 }
 .slide__Wrap {
@@ -544,7 +542,7 @@ input#X__btn {
   left: 0;
   width: 100%;
   height: auto;
-  padding: 80px 0;
+  padding: 80px 20px;
   overflow: hidden;
   text-transform: uppercase;
 }
@@ -642,6 +640,299 @@ input#X__btn {
   display: none;
 }
 
+/*  */
+/* --------------5. 닌텐도 다운로드 소프트웨어 영역 - 섹션4 ------------------- */
+#download__container {
+  padding: 80px 20px;
+  background-color: #f4f5f7;
+}
+.download__contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+/* 컨텐츠 영역 스타일 */
+.black {
+  margin: 120px 0 60px;
+  color: #3b3b3b;
+}
+.download_contentsbox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.download__box {
+  height: auto;
+  margin-bottom: 50px;
+  background-color: #fafafc;
+}
+.download__text {
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.download__text h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+  color: #3b3b3b;
+}
+.download__text h5 {
+  margin: 5px 0 10px;
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+  color: #606060;
+}
+.download__text p {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #bbb;
+}
+.download__text > p > img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.download__text > span {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+.moreView {
+  display: block;
+  width: 124px;
+  height: 40px;
+  margin: 50px auto 0;
+  border-radius: 40px;
+  border: 2px solid #9c9c9c;
+  color: #9c9c9c;
+  font-size: 16px;
+  background-color: transparent;
+  box-shadow: none;
+  transition: all 0.35s ease-in-out;
+}
+.moreView:hover {
+  border-color: #ed1c24;
+  color: #ed1c24;
+  text-decoration: underline;
+}
+
+/*  */
+/* --------------6. 공지사항 및 업데이트 영역 - 섹션5 ------------------- */
+#notice__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+/* NEWS 영역 */
+.notice__area {
+  flex-basis: 48%;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio'] + label {
+  display: inline-block;
+  color: #555555;
+  font-size: 18px;
+  font-weight: var(--weight-regular);
+  padding: 25px 10px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type='radio']:checked + label {
+  color: #e74330;
+  border-bottom: 2px solid #e74330;
+}
+label:nth-of-type(1) {
+  margin-left: 50px;
+}
+.noticeTap__box {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #dbdbdb;
+}
+input[id='tab01']:checked ~ .noticeTap1 {
+  display: block;
+}
+input[id='tab02']:checked ~ .noticeTap2 {
+  display: block;
+}
+input[id='tab03']:checked ~ .noticeTap3 {
+  display: block;
+}
+.notice__title {
+  display: inline-block;
+  margin: 0;
+  font-size: 40px;
+  vertical-align: middle;
+}
+.update__title {
+  margin: 0;
+  vertical-align: middle;
+}
+.update__title h2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 40px;
+}
+.update__title > span {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+}
+.tap__text {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 1px 0;
+}
+.tapText1 {
+  margin-top: 10px;
+}
+.tapObject {
+  width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666666;
+  font-size: 14px;
+}
+.tabDate {
+  color: #ababab;
+  font-size: 14px;
+}
+/* UPDATE 영역 */
+.update__area {
+  flex-basis: 48%;
+  max-width: 48%;
+}
+.update__contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.update__box {
+  margin: 25px 10px 25px;
+  border: 1px solid #dedede;
+}
+.update__text {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px 15px;
+  font-size: 14px;
+}
+.update__text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  line-height: 18px;
+  height: 36px;
+  color: #666;
+}
+.update__text span {
+  color: #b7b6b6;
+  font-size: 14px;
+}
+.update__text span::before {
+  content: '';
+  display: block;
+  width: 51px;
+  height: 2px;
+  background-color: #e70012;
+  margin: 20px 0;
+}
+
+/*  */
+/* --------------------7. 하단 푸터 ----------------------------------- */
+#footer {
+  position: relative;
+  width: 100%;
+  height: 244px;
+  background-color: #282c2f;
+  color: #9e9e9e;
+}
+.footer__line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background: #525252;
+}
+.footer__contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+.footer__topContents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__topContents {
+}
+.footer__left {
+  display: flex;
+  align-items: center;
+}
+.footerEtc {
+  margin-left: 50px;
+}
+.footerEtc p {
+  display: inline-block;
+  padding: 0 15px;
+  border-right: 1px solid #525252;
+}
+.footerEtc p:nth-of-type(2) {
+  border: none;
+}
+.footer__right {
+  text-align: right;
+}
+.footer__right p {
+  margin: 5px 0 0;
+}
+.footer__bottomContents {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0;
+  margin: 50px 0 0;
+}
+.footer__adress {
+  line-height: 22px;
+}
+.footer__sns {
+  font-size: 27px;
+  align-items: center;
+  color: #babbbc;
+}
+.fa-youtube {
+  margin-right: 5px;
+}
+.fab {
+  transition: all 0.3s ease-in-out;
+}
+.fab:hover {
+  color: #f1001d;
+  cursor: pointer;
+}
+.footerEtc p:hover {
+  color: #f1001d;
+  cursor: pointer;
+}
 /*  */
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
 /* PC 해상도 1024px ~ */
@@ -768,6 +1059,22 @@ input#X__btn {
   }
   .arrowBtn.down {
     transform: translateY(-50%) rotate(0deg) scaleY(-1);
+  }
+
+  /*  */
+  /* --------------2. 이미지 슬라이드 영역 ------------------- */
+
+  .btn__title {
+    display: none;
+  }
+  .slide--img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #explantion__container {
+    display: none;
   }
 }
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
