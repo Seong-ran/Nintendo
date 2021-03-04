@@ -1090,11 +1090,68 @@ input[id='tab03']:checked ~ .noticeTap3 {
   .progress-bar {
     height: 100%;
   }
-  /* ----------------- */
+  /*  */
+  /* --------------3. 닌텐도 소개 영역 - 섹션2 ------------------- */
   #explantion__container {
   }
+  .slide__Wrap {
+    width: 90%;
+  }
+  .slide__box {
+  }
+  .slide__list {
+    background: yellowgreen;
+  }
+  .slide__contents {
+  }
+  .slide__section {
+    margin: auto;
+    background: purple;
+  }
+  .slide__section:nth-of-type(odd) {
+    background: skyblue;
+  }
+  .top {
+    margin: 0 auto 40px;
+  }
+
+  /*  */
+  /* --------------4. 닌텐도 주요 소프트웨어 영역 - 섹션3 ------------------- */
+  .software__btn {
+    justify-content: center;
+  }
+  /*  */
+  /* --------------5. 닌텐도 다운로드 소프트웨어 영역 - 섹션4 ------------------- */
+  .download_contentsbox {
+    justify-content: space-evenly;
+  }
+  /*  */
+  /* --------------6. 공지사항 및 업데이트 영역 - 섹션5 ------------------- */
   #notice__container {
     display: none;
+  }
+  /*  */
+  /* --------------------7. 하단 푸터 ----------------------------------- */
+  .footer__contents {
+    background-color: #282c2f;
+  }
+  .footer__bottomContents {
+  }
+  .footer__adress {
+    display: none;
+  }
+  .footer__sns {
+    margin: auto;
+    text-align: center;
+    background: navy;
+  }
+  .fa-youtube {
+    margin-right: 18px;
+    margin-bottom: 20px;
+  }
+  .footer__sns::after {
+    content: '2006 Nintendo of Korea Co., Ltd. All Rights Reserved.';
+    display: block;
   }
 }
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */

@@ -89,11 +89,12 @@ const slideContents = document.querySelectorAll('.slide__section');
 const slideBtnNext = document.querySelector('.slide__btn--next');
 const slideBtnPrev = document.querySelector('.slide__btn--prev');
 const slideLength = slideContents.length;
-const slideWidth = 1000;
+const slideWidth = slideContents.getBoundingClientReact();
 const slideSpeed = 300; // slide speed
 const startNum = 0; // initial slide index (0 ~ 4)
 const pagination = document.querySelector('.slide_pagination');
 const slideNumber = document.querySelector('.slide__number--bold');
+
 
 
 // 첫번째와 마지막 슬라이드 복제
@@ -143,6 +144,7 @@ slideBtnNext.addEventListener('click', () => {
       curSlide = slideContents[++curIndex];
       curSlide.classList.add('slide_active');
       slideNumber.innerText = number;
+      console.log(slideWidth);
 });
  /** Prev Button Event */
 slideBtnPrev.addEventListener('click', () => {
