@@ -664,6 +664,15 @@ input#X__btn {
   margin-bottom: 50px;
   background-color: #fafafc;
 }
+.download__img {
+  overflow: hidden;
+}
+.download__img img {
+  transition: all 0.35s ease-in-out;
+}
+.download__box:hover .download__img img {
+  transform: scale(1.1);
+}
 .download__text {
   padding: 10px;
   text-overflow: ellipsis;
@@ -741,9 +750,8 @@ input#X__btn {
   height: 40px;
   vertical-align: middle;
   border-radius: 100%;
-  border: 3px solid #b3b3b3;
+  border: 3px solid #b3b3b39a;
   background-color: transparent;
-  opacity: 0.6;
   cursor: pointer;
   transition: all 0.35s ease;
 }
@@ -755,7 +763,7 @@ input#X__btn {
   display: inline-block;
   width: 25px;
   height: 2px;
-  background-color: #b3b3b3;
+  background-color: #b3b3b3bb;
   transition: all 0.35s ease;
 }
 .circle span:nth-child(2) {
@@ -826,6 +834,13 @@ input[id='tab03']:checked ~ .noticeTap3 {
   justify-content: space-between;
   padding: 10px;
   margin: 1px 0;
+  cursor: pointer;
+}
+.tap__text:hover .tapObject {
+  color: #e74330;
+}
+.tap__text:hover .tabDate {
+  color: #e74330;
 }
 .tapText1 {
   margin-top: 10px;
@@ -1017,6 +1032,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
     --font-small: 1.5em;
     --font-micro: 1.25em;
   }
+
   /* 1-2. 클릭 시 나타나는 좌측 슬라이드 메뉴 바 */
   #menu__slide {
     min-width: 500px;
@@ -1279,27 +1295,36 @@ input[id='tab03']:checked ~ .noticeTap3 {
   #navbar {
     width: 100vw;
   }
+  /* 1-2. 클릭 시 나타나는 좌측 슬라이드 메뉴 바 */
   #menu__slide {
+    left: 2000px;
     width: 100%;
     min-width: 100%;
+  }
+  #X__btn:checked ~ label + div#menu__slide {
+    right: 0;
   }
   .navbar__btn {
     flex-basis: 20%;
     order: 2;
+    position: relative;
   }
   .navbar__etc {
     display: none;
+  }
+  .xBtn__label {
+    left: 40px;
+    margin-right: 25px;
   }
   /* 2. 중앙 로고 */
   .navbar__logo {
     flex-basis: 80%;
     justify-content: left;
-    margin-left: 15px;
+    margin-left: 8px;
     order: 1;
   }
   .navbar__logo img {
     object-fit: contain;
-    width: 50%;
   }
   /* 1-2-1. 메뉴 컨텐츠 스타일 */
   .menu__main {
@@ -1514,6 +1539,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   .download_contentsbox {
     justify-content: space-evenly;
   }
+
   /*  */
   /* --------------6. 공지사항 및 업데이트 영역 - 섹션5 ------------------- */
   #notice__container {
@@ -1522,6 +1548,10 @@ input[id='tab03']:checked ~ .noticeTap3 {
     max-width: none;
     padding: 0;
     /* padding: 80px 25px 20px; */
+  }
+  .circle {
+    top: 22%;
+    right: 5%;
   }
   .notice__area {
     flex-basis: 100%;
@@ -1537,6 +1567,9 @@ input[id='tab03']:checked ~ .noticeTap3 {
     padding: 35px 25px 20px;
     background-color: #f8f9fb;
   }
+  .update__area .circle {
+    top: 15%;
+  }
   .update__box {
     margin: 0 10px 25px;
     border: 1px solid #dedede;
@@ -1549,10 +1582,10 @@ input[id='tab03']:checked ~ .noticeTap3 {
     flex-wrap: wrap;
   }
   .updateBox1 {
-    margin: 15px auto 0;
+    margin: 15px auto 50px;
   }
   .updateBox2 {
-    margin: 25px auto 50px;
+    margin: 15px auto 50px;
   }
   /*  */
   /* --------------------7. 하단 푸터 ----------------------------------- */

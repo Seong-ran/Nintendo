@@ -94,13 +94,13 @@ const startNum = 0; // initial slide index (0 ~ 4)
 const pagination = document.querySelector('.slide_pagination');
 const slideNumber = document.querySelector('.slide__number--bold');
 
-// 숫자 번호 넣기
-let number = slideNumber.innerText;
-//  숫자 앞에 0 추가하기
-function pad(n, width) {
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
-  }
+// // 숫자 번호 넣기
+// let number = slideNumber.innerText;
+// //  숫자 앞에 0 추가하기
+// function pad(n, width) {
+//     n = n + '';
+//     return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+//   }
 
 function prev(){
   if(curPos > 0){
@@ -110,9 +110,11 @@ function prev(){
     postion += document.querySelector(".slide__box").offsetWidth;
     images.style.transform = `translateX(${postion}px)`;
     curPos = curPos - 1;
+    slideNumber.innerHTML = '02';
   }
   if(curPos == 0){
     prevBtn.setAttribute('disabled', 'true')
+    slideNumber.innerHTML = '01';
   }
 }
 function next(){
@@ -123,11 +125,11 @@ function next(){
     postion -= document.querySelector(".slide__box").offsetWidth;
     images.style.transform = `translateX(${postion}px)`;
     curPos = curPos + 1;
-    number = pad(curPos + 2,2);
+    slideNumber.innerHTML = '01';
   }
   if(curPos == 1){
     nextBtn.setAttribute('disabled', 'true')
-    number = pad(curPos);
+    slideNumber.innerHTML = '02';
   }
 }
 
@@ -141,8 +143,10 @@ function touch_end(event) {
   end_x = event.changedTouches[0].pageX;
   if(start_x > end_x){
     next();
+    slideNumber.innerHTML = '02';
   }else{
     prev();
+    slideNumber.innerHTML = '01';
   }
 }
  
