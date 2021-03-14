@@ -49,7 +49,7 @@ let slideIndex = 0;
 let currentBtn = slideBtn[slideIndex];
 let currentMainSlide = mainSlide[slideIndex];
 
-let progressInterval = setInterval(progress, 10);
+let progressInterval = setInterval(progress, 60);
 function progress() {
     if ( i === 100 ) {
         i = -5;

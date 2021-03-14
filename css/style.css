@@ -9,6 +9,16 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('font/NanumBarunGothic.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothicBold';
+  src: url('font/NanumBarunGothicBold.ttf');
+}
 /* ------------------------------------------ */
 /* Global set */
 :root {
@@ -31,7 +41,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'NanumSquare', sans-serif;
+  /* font-family: 'NanumSquare', sans-serif; */
+  font-family: 'NanumBarunGothic', sans-serif;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -50,10 +61,11 @@ a {
   color: #fff;
 }
 .section__title h3 {
-  font-size: 24px;
+  font-size: var(--font-small);
 }
 .section__title h2 {
-  font-size: 40px;
+  margin-top: 5px;
+  font-size: var(--font-large);
 }
 /*  */
 /* --------------1. 네비게이션 바(상단) ------------------- */
@@ -154,7 +166,7 @@ input#X__btn {
   padding: 45px 0 0 50px;
 }
 .gnb__title {
-  font-weight: 800;
+  font-weight: var(--weight-bold);
   font-size: var(--font-small);
   color: #3b3b3b;
 }
@@ -296,6 +308,7 @@ input#X__btn {
 .navbar__etc--menu {
   text-align: center;
   line-height: 40px;
+  transform: skew(-0.001deg);
 }
 .menu--amibo {
   margin: 0 36px 0 46px;
@@ -394,11 +407,11 @@ input#X__btn {
   border-right: 2px solid #b1b1b1;
 }
 .btn__title {
-  font-size: 18px;
   color: #333333;
-  font-weight: 400;
+  font-weight: var(--weight-regular);
   font-size: var(--font-regular);
   word-break: keep-all;
+  transform: skew(-0.0001deg);
 }
 .btn--active {
   opacity: 1;
@@ -458,25 +471,32 @@ input#X__btn {
   margin-bottom: 40px;
 }
 .subTitle {
-  font-size: 24px;
+  font-family: 'NanumBarunGothicBold';
+  color: #3b3b3b;
+  transform: skew(-0.0001deg);
 }
 .mainTitle {
-  font-size: 40px;
-  margin-top: -2px;
+  color: #3b3b3b;
+  font-size: var(--font-large);
 }
 .text {
   margin: 50px auto 40px;
-  font-size: 18px;
-  line-height: 25px;
+  color: #3b3b3b;
+  font-size: var(--font-regular);
+  line-height: 28px;
+  transform: skew(-0.0001deg);
 }
 .more {
   background: transparent;
   border: 2px solid #cdcdcd;
-  width: 160px;
-  height: 40px;
+  width: 170px;
+  height: 50px;
   border-radius: 40px;
   cursor: pointer;
+  color: #3b3b3b;
   transition: all 0.35s ease-in-out;
+  font-size: var(--font-regular);
+  transform: skew(-0.0001deg);
 }
 .more:hover {
   border-color: #ed1c24;
@@ -485,7 +505,7 @@ input#X__btn {
 }
 .more-right {
   margin-left: 5px;
-  font-size: 18px;
+  font-size: var(--font-regular);
   vertical-align: middle;
 }
 
@@ -501,14 +521,14 @@ input#X__btn {
 .slide__btn--prev {
   background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: var(--font-medium);
   line-height: 50%;
   cursor: pointer;
 }
 .slide__btn--next {
   background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: var(--font-medium);
   line-height: 50%;
   cursor: pointer;
 }
@@ -581,6 +601,7 @@ input#X__btn {
 .software__btn {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .software__box {
   flex-basis: 24.9%;
@@ -605,7 +626,10 @@ input#X__btn {
 }
 .software--text h4 {
   position: relative;
-  text-shadow: 1px 1px 0px #333;
+  margin-bottom: 7px;
+  font-weight: normal;
+  transform: skew(-0.001deg);
+  /* text-shadow: 1px 1px 0px #333; */
 }
 .software--text img {
   position: absolute;
@@ -614,6 +638,9 @@ input#X__btn {
   transform: translate(-90%, -50%);
   height: auto;
   object-fit: contain;
+}
+.software--text roboto {
+  font-weight: var(--weight-regular);
 }
 .box3 .software--text img {
   left: 96%;
@@ -641,7 +668,7 @@ input#X__btn {
 /* --------------5. 닌텐도 다운로드 소프트웨어 영역 - 섹션4 ------------------- */
 #download__container {
   padding: 80px 20px;
-  background-color: #f4f5f7;
+  background-color: #e7e7e7;
 }
 .download__contents {
   width: 100%;
@@ -681,20 +708,23 @@ input#X__btn {
 }
 .download__text h4 {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   color: #3b3b3b;
+  transform: skew(-0.0001deg);
 }
 .download__text h5 {
   margin: 5px 0 10px;
-  font-size: 16px;
+  font-size: var(--font-small);
   font-weight: var(--weight-regular);
   color: #606060;
+  transform: skew(-0.001deg);
 }
 .download__text p {
   margin: 10px 0 5px;
-  font-size: 14px;
+  font-size: var(--font-micro);
   color: #bbb;
+  transform: skew(-0.001deg);
 }
 .download__text > p > img {
   vertical-align: middle;
@@ -714,10 +744,11 @@ input#X__btn {
   border-radius: 40px;
   border: 2px solid #9c9c9c;
   color: #9c9c9c;
-  font-size: 16px;
+  font-size: var(--font-small);
   background-color: transparent;
   box-shadow: none;
   transition: all 0.35s ease-in-out;
+  transform: skew(-0.0001deg);
 }
 .moreView:hover {
   border-color: #ed1c24;
@@ -782,8 +813,8 @@ input[type='radio'] {
 input[type='radio'] + label {
   display: inline-block;
   color: #555555;
-  font-size: 18px;
-  font-weight: var(--weight-regular);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
   padding: 45px 10px;
   vertical-align: middle;
   box-sizing: border-box;
@@ -813,7 +844,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   margin: 0;
   padding: 30px 10px;
   padding-left: 0;
-  font-size: 40px;
+  font-size: var(--font-large);
   vertical-align: middle;
 }
 .update__title {
@@ -823,7 +854,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
 .update__title h2 {
   display: inline-block;
   vertical-align: middle;
-  font-size: 40px;
+  font-size: var(--font-large);
 }
 .update__title > span {
   display: inline-block;
@@ -852,18 +883,19 @@ input[id='tab03']:checked ~ .noticeTap3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #666666;
-  font-size: 14px;
+  font-size: var(--font-micro);
+  transform: skew(-0.1deg);
 }
 .tabDate {
   color: #ababab;
-  font-size: 14px;
+  font-size: var(--font-micro);
+  transform: skew(-0.0001deg);
 }
 /* UPDATE 영역 */
 .update__area {
   position: relative;
   flex-basis: 48%;
   max-width: 48%;
-  background: plum;
 }
 .update__title > h2 {
   vertical-align: middle;
@@ -892,7 +924,8 @@ input[id='tab03']:checked ~ .noticeTap3 {
   height: auto;
   margin: 0;
   padding: 20px 15px;
-  font-size: 14px;
+  font-size: var(--font-micro);
+  transform: skew(-0.0001deg);
 }
 .update__text p {
   display: -webkit-box;
@@ -906,8 +939,10 @@ input[id='tab03']:checked ~ .noticeTap3 {
   color: #666;
 }
 .update__text span {
+  display: inline-block;
   color: #b7b6b6;
-  font-size: 14px;
+  font-size: var(--font-micro);
+  transform: skew(-0.0001deg);
 }
 .update__text span::before {
   content: '';
@@ -967,6 +1002,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   display: inline-block;
   padding: 0 15px;
   border-right: 1px solid #525252;
+  transform: skew(-0.0001deg);
 }
 .footerEtc p:nth-of-type(2) {
   border: none;
@@ -987,7 +1023,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   line-height: 22px;
 }
 .footer__sns {
-  font-size: 27px;
+  font-size: var(--font-medium);
   align-items: center;
   color: #babbbc;
 }
@@ -1628,7 +1664,9 @@ input[id='tab03']:checked ~ .noticeTap3 {
     margin-bottom: 25px;
   }
   .download__text > p > img {
-    width: 15%;
+    width: 30px;
+    max-width: 30px;
+    min-width: 20px;
     object-fit: contain;
   }
   .download__text h4 {
@@ -1692,7 +1730,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
     padding: 15px 10px;
   }
   .update__title .circle {
-    top: 5%;
+    top: 4%;
   }
   .update__contents {
     flex-wrap: wrap;
@@ -1772,7 +1810,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   .footer__sns::after {
     content: '2006 Nintendo of Korea Co., Ltd. All Rights Reserved.';
     display: block;
-    font-size: 16px;
+    font-size: var(--font-small);
   }
   /* etc */
   .none {
