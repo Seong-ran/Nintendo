@@ -1,7 +1,7 @@
 /* Font family */
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 @font-face {
   font-family: 'TmonMonsori';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff')
@@ -344,7 +344,7 @@ input#X__btn {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 /*  슬라이드 활성화  */
 .slide--active {
@@ -613,7 +613,7 @@ input#X__btn {
   left: 100%;
   transform: translate(-90%, -50%);
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 .box3 .software--text img {
   left: 96%;
@@ -652,6 +652,7 @@ input#X__btn {
 .black {
   margin: 120px 0 60px;
   color: #3b3b3b;
+  word-break: keep-all;
 }
 .download_contentsbox {
   width: 100%;
@@ -862,6 +863,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   position: relative;
   flex-basis: 48%;
   max-width: 48%;
+  background: plum;
 }
 .update__title > h2 {
   vertical-align: middle;
@@ -883,7 +885,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
 }
 .update__box > img {
   width: 100%;
-  object-fit: contain;
+  object-fit: fill;
 }
 .update__text {
   width: 100%;
@@ -1027,10 +1029,10 @@ input[id='tab03']:checked ~ .noticeTap3 {
     /* color */
     /* Font size */
     --font-large: 2.25em;
-    --font-medium: 2em;
-    --font-regular: 1.75em;
-    --font-small: 1.5em;
-    --font-micro: 1.25em;
+    --font-medium: 1.5em;
+    --font-regular: 1.125em;
+    --font-small: 1em;
+    --font-micro: 0.875em;
   }
 
   /* 1-2. 클릭 시 나타나는 좌측 슬라이드 메뉴 바 */
@@ -1134,7 +1136,16 @@ input[id='tab03']:checked ~ .noticeTap3 {
 
   /*  */
   /* --------------2. 이미지 슬라이드 영역 ------------------- */
-
+  #slide__container {
+    height: 80vh;
+  }
+  .slide--img {
+    top: 88px;
+    height: 100%;
+  }
+  .slide--img img {
+    object-fit: fill;
+  }
   /* 슬라이드 버튼  */
   .btn__boxes {
     justify-content: space-between;
@@ -1166,6 +1177,8 @@ input[id='tab03']:checked ~ .noticeTap3 {
   /* --------------3. 닌텐도 소개 영역 - 섹션2 ------------------- */
   #explantion__container {
     max-width: 740px;
+    margin-top: 80px;
+    margin-bottom: 70px;
     padding: 0;
   }
   .slide__list {
@@ -1180,6 +1193,18 @@ input[id='tab03']:checked ~ .noticeTap3 {
   /* --------------4. 닌텐도 주요 소프트웨어 영역 - 섹션3 ------------------- */
   .software__btn {
     justify-content: center;
+  }
+  .software__box {
+    min-width: none;
+    min-height: 24.9%;
+    max-height: 24.9%;
+    padding: 20px 20px 20px 10px;
+  }
+  .software__box span {
+    height: 130px;
+  }
+  .software--text img {
+    object-fit: contain;
   }
   /*  */
   /* --------------5. 닌텐도 다운로드 소프트웨어 영역 - 섹션4 ------------------- */
@@ -1197,6 +1222,10 @@ input[id='tab03']:checked ~ .noticeTap3 {
     flex-basis: 100%;
     padding: 0px 50px 20px;
   }
+  .tapObject {
+    font-size: var(--font-regular);
+    transform: skew(-0.1deg);
+  }
   /* UPDATE 영역 */
   .update__area {
     flex-basis: 100%;
@@ -1211,13 +1240,32 @@ input[id='tab03']:checked ~ .noticeTap3 {
   }
   .update__box img {
     width: 100%;
-    object-fit: contain;
+    object-fit: fill;
+  }
+  .update__text p {
+    font-size: var(--font-regular);
+    transform: skew(-0.1deg);
   }
   .updateBox1 {
     margin-left: 0;
   }
   .updateBox2 {
     margin-right: 0;
+  }
+  .circle {
+    top: 35px;
+    right: 50px;
+  }
+  .circle:nth-of-type(2) {
+    top: 35px;
+    right: 50px;
+    background: red;
+  }
+  .update__area {
+    margin: 0;
+  }
+  .update__title .circle {
+    top: 12%;
   }
   /*  */
   /* --------------------7. 하단 푸터 ----------------------------------- */
@@ -1246,6 +1294,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
     display: block;
     margin: 15px auto;
     font-size: var(--font-small);
+    transform: rotate(0.1deg);
   }
   .footerEtc p:nth-child(2)::after {
     content: 'PC버전';
@@ -1278,7 +1327,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
   .footer__sns::after {
     content: '2006 Nintendo of Korea Co., Ltd. All Rights Reserved.';
     display: block;
-    font-size: 16px;
+    font-size: var(--font-micro);
   }
 }
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  */
@@ -1308,13 +1357,14 @@ input[id='tab03']:checked ~ .noticeTap3 {
     flex-basis: 20%;
     order: 2;
     position: relative;
+    right: 0;
   }
   .navbar__etc {
     display: none;
   }
   .xBtn__label {
-    left: 40px;
-    margin-right: 25px;
+    left: 20px;
+    margin-right: 0;
   }
   /* 2. 중앙 로고 */
   .navbar__logo {
@@ -1324,6 +1374,7 @@ input[id='tab03']:checked ~ .noticeTap3 {
     order: 1;
   }
   .navbar__logo img {
+    width: 50%;
     object-fit: contain;
   }
   /* 1-2-1. 메뉴 컨텐츠 스타일 */
@@ -1428,7 +1479,20 @@ input[id='tab03']:checked ~ .noticeTap3 {
   }
   /*  */
   /* --------------2. 이미지 슬라이드 영역 ------------------- */
-
+  #slide__container {
+    height: 80vh;
+  }
+  .main__slider {
+    height: 80vh;
+  }
+  .slide--img {
+    top: 88px;
+    height: auto;
+  }
+  .slide--img img {
+    max-height: 100%;
+    object-fit: fill;
+  }
   /* 슬라이드 버튼  */
   .btn__boxes {
     justify-content: space-between;
@@ -1482,20 +1546,23 @@ input[id='tab03']:checked ~ .noticeTap3 {
     object-fit: contain;
   }
   .subTitle {
-    font-size: 16px;
+    font-size: var(--font-regular);
   }
   .mainTitle {
-    font-size: 24px;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
     margin-top: -2px;
   }
   .text {
     margin: 50px auto 40px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: var(--font-small);
+    line-height: 23px;
+    transform: skew(-0.1deg);
   }
   .more-right {
     margin-left: 5px;
-    font-size: 14px;
+    font-size: var(--font-small);
+    transform: skew(-0.1deg);
     vertical-align: middle;
   }
   /*  */
@@ -1524,20 +1591,57 @@ input[id='tab03']:checked ~ .noticeTap3 {
   }
   .slide__btn {
     bottom: 4%;
-    font-size: 14px;
+    font-size: var(--font-small);
   }
   .slide__btn .slide__number {
     line-height: 20px;
   }
   /*  */
   /* --------------4. 닌텐도 주요 소프트웨어 영역 - 섹션3 ------------------- */
+  #software__container {
+    padding-top: 20px;
+  }
+  .software__btn {
+    justify-content: center;
+  }
   .software__btn {
     justify-content: center;
   }
   /*  */
   /* --------------5. 닌텐도 다운로드 소프트웨어 영역 - 섹션4 ------------------- */
+  #download__container {
+    padding: 20px 10px 40px;
+  }
+  .section__title {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
   .download_contentsbox {
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+  .download__img img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .download__box {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  .download__text > p > img {
+    width: 15%;
+    object-fit: contain;
+  }
+  .download__text h4 {
+    font-size: var(--font-regular);
+  }
+  .download__text h5 {
+    display: none;
+  }
+  .download__text > span {
+    display: none;
+  }
+  .moreView {
+    margin: auto;
   }
 
   /*  */
@@ -1549,43 +1653,65 @@ input[id='tab03']:checked ~ .noticeTap3 {
     padding: 0;
     /* padding: 80px 25px 20px; */
   }
+  input[type='radio'] + label {
+    padding: 20px 5px;
+  }
   .circle {
-    top: 22%;
+    top: 7%;
     right: 5%;
+    width: 30px;
+    height: 30px;
+  }
+  .circle span {
+    width: 15px;
   }
   .notice__area {
     flex-basis: 100%;
-    padding: 80px 25px 20px;
+    width: 100%;
+    padding: 15px 10px 20px;
+    box-sizing: border-box;
+  }
+  .notice__area > h2 {
+    font-size: var(--font-large);
+    padding: 15px 10px;
   }
   .tapObject {
+    font-size: var(--font-small);
     width: 200px;
+    transform: skew(-0.1deg);
   }
   /* UPDATE 영역 */
   .update__area {
     flex-basis: 100%;
     max-width: none;
-    padding: 35px 25px 20px;
+    padding: 15px 10px 20px;
     background-color: #f8f9fb;
   }
-  .update__area .circle {
-    top: 15%;
+  .update__title h2 {
+    font-size: var(--font-large);
+    padding: 15px 10px;
+  }
+  .update__title .circle {
+    top: 5%;
+  }
+  .update__contents {
+    flex-wrap: wrap;
   }
   .update__box {
+    flex-basis: 100%;
     margin: 0 10px 25px;
     border: 1px solid #dedede;
   }
   .update__box img {
     width: 100%;
-    object-fit: contain;
+    object-fit: fill;
   }
-  .update__contents {
-    flex-wrap: wrap;
-  }
+
   .updateBox1 {
-    margin: 15px auto 50px;
+    margin: 15px auto 15px;
   }
   .updateBox2 {
-    margin: 15px auto 50px;
+    margin: 15px auto 25px;
   }
   /*  */
   /* --------------------7. 하단 푸터 ----------------------------------- */
@@ -1647,5 +1773,9 @@ input[id='tab03']:checked ~ .noticeTap3 {
     content: '2006 Nintendo of Korea Co., Ltd. All Rights Reserved.';
     display: block;
     font-size: 16px;
+  }
+  /* etc */
+  .none {
+    display: none;
   }
 }

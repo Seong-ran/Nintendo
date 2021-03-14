@@ -140,83 +140,203 @@
         <!-- 슬라이드 이미지 쇼 -->
         <div class="main__slider">
           <div class="slides">
+            <!-- 슬라이드 버튼 태그 -->
+            <div class="btn__boxes not--mobile">
+              <div class="progress__btn btn--active">
+                <!-- 차징 프로그래스 바 -->
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <!-- 버튼 내용 -->
+                <h2 class="btn__title">모여봐요 동물의 숲</h2>
+              </div>
+              <div class="progress__btn short-line">
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <h2 class="btn__title">포켓몬스터 소드· 실드</h2>
+              </div>
+              <div class="progress__btn">
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <h2 class="btn__title">링 피트 어드벤처</h2>
+              </div>
+              <div class="progress__btn short-line">
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <h2 class="btn__title">닌텐도 스위치 Lite</h2>
+              </div>
+              <div class="progress__btn short-line-2">
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <h2 class="btn__title">루이지 멘션 3</h2>
+              </div>
+              <div class="progress__btn">
+                <div class="progress-bar">
+                  <div class="progress-bar__fill"></div>
+                </div>
+                <h2 class="btn__title">젤다의 전설 : 꿈꾸는 섬</h2>
+              </div>
+            </div>
             <!-- 첫번째 이미지 -->
             <div class="slide__content slide--active">
-              <div class="slide--img">
-                <img src="img/bgS_animalCrossing.png" alt="animalCrossing" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_animalCrossing--mobile.png"
+                  media="(min-width:320px) and (max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_animalCrossing--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_animalCrossing.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_animalCrossing--mobile.png  320w,
+                    img/bgS_animalCrossing--tab.png     768w,
+                    img/bgS_animalCrossing.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 1023px) 100vw, 100vw"
+                  src="img/bgS_animalCrossing.png"
+                  alt="animalCrossing"
+                />
+              </div> -->
             </div>
             <!-- 두번째 이미지 -->
             <div class="slide__content slide--active-X">
-              <div class="slide--img">
-                <img src="img/bgS_pokemonEx.png" alt="pokemonEx" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_pokemonEx--mobile.png"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_pokemonEx--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_pokemonEx.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_pokemonEx--mobile.png  320w,
+                    img/bgS_pokemonEx--tab.png     768w,
+                    img/bgS_pokemonEx.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 768px) 100vw, 100vw"
+                  src="img/bgS_pokemonEx.png"
+                  alt="pokemonEx"
+                />
+              </div> -->
             </div>
             <!-- 세번째 이미지 -->
             <div class="slide__content slide--active-X">
-              <div class="slide--img">
-                <img src="img/bgS_ringfit.png" alt="RingFit" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_ringfit--mobile.png"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_ringfit--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_ringfit.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_ringfit--mobile.png  320w,
+                    img/bgS_ringfit--tab.png     768w,
+                    img/bgS_ringfit.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 768px) 100vw, 100vw"
+                  src="img/bgS_ringfit.png"
+                  alt="RingFit"
+                />
+              </div> -->
             </div>
             <!-- 네번째 이미지 -->
             <div class="slide__content slide--active-X">
-              <div class="slide--img">
-                <img src="img/bgS_nintendoLite.png" alt="nintendoLite" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_nintendoLite--mobile.png"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_nintendoLite--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_nintendoLite.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_nintendoLite--mobile.png  320w,
+                    img/bgS_nintendoLite--tab.png     768w,
+                    img/bgS_nintendoLite.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 768px) 100vw, 100vw"
+                  src="img/bgS_nintendoLite.png"
+                  alt="nintendoLite"
+                />
+              </div> -->
             </div>
             <!-- 다섯번째 이미지 -->
             <div class="slide__content slide--active-X">
-              <div class="slide--img">
-                <img src="img/bgS_luigi.png" alt="Luigi3" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_luigi--mobile.png"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_luigi--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_luigi.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_luigi--mobile.png  320w,
+                    img/bgS_luigi--tab.png     768w,
+                    img/bgS_luigi.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 768px) 100vw, 100vw"
+                  src="img/bgS_luigi.png"
+                  alt="Luigi3"
+                />
+              </div> -->
             </div>
             <!-- 여섯번째 이미지 -->
             <div class="slide__content slide--active-X">
-              <div class="slide--img">
-                <img src="img/bgS_zeldaAwakening.png" alt="Zelda:Awakening" />
-              </div>
+              <picture class="slide--img">
+                <source
+                  srcset="img/bgS_zeldaAwakening--mobile.png"
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="img/bgS_zeldaAwakening--tab.png"
+                  media="(max-width: 1023px)"
+                />
+                <img src="img/bgS_zeldaAwakening.png" alt="" />
+              </picture>
+              <!-- <div class="slide--img">
+                <img
+                  srcset="
+                    img/bgS_zeldaAwakening--mobile.png  320w,
+                    img/bgS_zeldaAwakening--tab.png     768w,
+                    img/bgS_zeldaAwakening.png         1920w
+                  "
+                  size="(max-width:320px) 100vw, (max-width: 768px) 100vw, 100vw"
+                  src="img/bgS_zeldaAwakening.png"
+                  alt="Zelda:Awakening"
+                />
+              </div> -->
             </div>
-          </div>
-        </div>
-        <!-- 슬라이드 버튼 태그 -->
-        <div class="btn__boxes not--mobile">
-          <div class="progress__btn btn--active">
-            <!-- 차징 프로그래스 바 -->
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <!-- 버튼 내용 -->
-            <h2 class="btn__title">모여봐요 동물의 숲</h2>
-          </div>
-          <div class="progress__btn short-line">
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <h2 class="btn__title">포켓몬스터 소드· 실드</h2>
-          </div>
-          <div class="progress__btn">
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <h2 class="btn__title">링 피트 어드벤처</h2>
-          </div>
-          <div class="progress__btn short-line">
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <h2 class="btn__title">닌텐도 스위치 Lite</h2>
-          </div>
-          <div class="progress__btn short-line-2">
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <h2 class="btn__title">루이지 멘션 3</h2>
-          </div>
-          <div class="progress__btn">
-            <div class="progress-bar">
-              <div class="progress-bar__fill"></div>
-            </div>
-            <h2 class="btn__title">젤다의 전설 : 꿈꾸는 섬</h2>
           </div>
         </div>
       </div>
@@ -331,7 +451,7 @@
                   <h4>포켓몬스터소드 · 실드</h4>
                 </div>
               </div>
-              <div class="software__box box3" data-id="3">
+              <div class="software__box box3 none" data-id="3">
                 <div class="software--text">
                   <img src="img/char_ringfit.png" alt="RingFit" />
                   <h4>2019.10.18</h4>
@@ -341,7 +461,7 @@
                   <h4>링 피트 어드벤처</h4>
                 </div>
               </div>
-              <div class="software__box box4" data-id="4">
+              <div class="software__box box4 none" data-id="4">
                 <div class="software--text">
                   <img src="img/char_luigi.png" alt="luigi" />
                   <h4>2019.10.31</h4>
@@ -351,7 +471,7 @@
                   <h4>루이지 맨션 3</h4>
                 </div>
               </div>
-              <div class="software__box box5" data-id="5">
+              <div class="software__box box5 none" data-id="5">
                 <div class="software--text">
                   <img src="img/char_sonic.png" alt="sonic" />
                   <h4>2019.11.01</h4>
@@ -361,7 +481,7 @@
                   <h4>마리오와 소닉 AT 2020 도쿄 올림픽</h4>
                 </div>
               </div>
-              <div class="software__box box6" data-id="6">
+              <div class="software__box box6 none" data-id="6">
                 <div class="software--text">
                   <img src="img/char_zelda2.png" alt="" />
                   <h4>2019.09.20</h4>
@@ -422,7 +542,7 @@
                 <img src="img/dlg_2.png" alt="스플래툰" />
               </div>
               <div class="download__text">
-                <h4>스플래툰 스페셜 데모 2020</h4>
+                <h4>스플래툰<span class="none">스페셜 데모</span> 2020</h4>
                 <h5>3분간 지면을 마구 칠하는 「Turf War」</h5>
                 <span></span>
                 <p>
@@ -431,9 +551,9 @@
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
-                <img src="img/dlg_3.png" alt="스플래툰" />
+                <img src="img/dlg_3.png" alt="굿잡" />
               </div>
               <div class="download__text">
                 <h4>Good job!</h4>
@@ -445,7 +565,7 @@
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
                 <img src="img/dlg_4.png" alt="스플래툰" />
               </div>
@@ -464,7 +584,7 @@
                 <img src="img/dlg_5.png" alt="스플래툰" />
               </div>
               <div class="download__text">
-                <h4>성검전설3 TRIALS of MANA</h4>
+                <h4>성검전설3 <span class="none">TRIALS of MANA</span></h4>
                 <h5>각자의 운명, 각자의 선택</h5>
                 <span></span>
                 <p>
@@ -483,11 +603,13 @@
                 <span></span>
                 <p>
                   <img src="img/joycon.png" alt="joycon" />
-                  <span>어드벤처, 시뮬레이션, 기타</span>
+                  <span
+                    ><span class="none">어드벤처, </span>시뮬레이션, 기타</span
+                  >
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
                 <img src="img/dlg_7.png" alt="스플래툰" />
               </div>
@@ -501,7 +623,7 @@
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
                 <img src="img/dlg_8.png" alt="스플래툰" />
               </div>
@@ -534,7 +656,9 @@
                 <img src="img/dlg_10.png" alt="스플래툰" />
               </div>
               <div class="download__text">
-                <h4>젤다의 전설 브레스 오브 더 와일드</h4>
+                <h4>
+                  젤다의 전설 <span class="none">브레스 오브 더 와일드</span>
+                </h4>
                 <h5>모험의 모든 것을 당신이 원하는 대로</h5>
                 <span></span>
                 <p>
@@ -543,7 +667,7 @@
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
                 <img src="img/dlg_11.png" alt="스플래툰" />
               </div>
@@ -557,7 +681,7 @@
                 </p>
               </div>
             </div>
-            <div class="download__box">
+            <div class="download__box none">
               <div class="download__img">
                 <img src="img/dlg_12.png" alt="스플래툰" />
               </div>
